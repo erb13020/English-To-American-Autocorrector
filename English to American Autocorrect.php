@@ -2,7 +2,7 @@
 /*
 Plugin Name: English to American Autocorrecter
 Description: This plugin replaces common English spellings of words with their respective American English spellings.
-Version:     1.1
+Version:     1.11
 Author:      Eric Burt
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,7 +13,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 /* FUNCTIONS */
-function english_american_startcase($text){
+function eb_english_american_startcase($text){
 	$English = array(
 	'Grey', 'Travelled', 'Centre', 'Theatre', 'Colour', 'Labour', 'Defence', 'Jewellery', 'Kerb', 'Litre', 'Metre', 'Tyre', 'Aluminium', 'Neighbour', 'Aeroplane', 'Carburettor', 'Fillet', 'Moustache', 'Speciality', 'Doughnut', 'Orientated', 'Disorientated', 'Phoney', 'Plough', 'Sceptic', 'Sulphur', 'Vice', 'Cosy', 'Chilli'
 	);
@@ -25,7 +25,7 @@ function english_american_startcase($text){
 	return str_replace($English, $American, $text);
 }
 
-function english_american_lowercase($text){
+function eb_english_american_lowercase($text){
 	$english = array(
 		'grey', 'travelled', 'centre', 'theatre', 'colour', 'labour', 'defence', 'jewellery', 'kerb', 'litre', 'metre', 'tyre', 'aluminium', 'neighbour', 'aeroplane', 'carburettor', 'fillet', 'moustache', 'speciality', 'doughnut', 'orientated', 'disorientated', 'phoney', 'plough', 'sceptic', 'sulphur', 'vice', 'cosy', 'chilli'
 	);
@@ -37,7 +37,7 @@ function english_american_lowercase($text){
 	return str_replace($english, $american, $text);
 }
 
-function english_american_uppercase($text){
+function eb_english_american_uppercase($text){
 	$ENGLISH = array(
 		'GREY', 'TRAVELLED', 'CENTRE', 'THEATRE', 'COLOUR', 'LABOUR', 'DEFENCE', 'JEWELLERY', 'KERB', 'LITRE', 'METRE', 'TYRE', 'ALUMINIUM', 'NEIGHBOUR', 'AEROPLANE', 'CARBURETTOR', 'FILLET', 'MOUSTACHE', 'SPECIALITY', 'DOUGHNUT', 'ORIENTATED', 'DISORIENTATED', 'PHONEY', 'PLOUGH', 'SCEPTIC', 'SULPHUR', 'VICE', 'COSY', 'CHILLI'
 	);
@@ -50,13 +50,13 @@ function english_american_uppercase($text){
 }
 /* FILTERS */
 
-add_filter('the_title', 'english_american_startcase');
-add_filter('the_content', 'english_american_startcase');
+add_filter('the_title', 'eb_english_american_startcase');
+add_filter('the_content', 'eb_english_american_startcase');
 
-add_filter('the_title', 'english_american_lowercase');
-add_filter('the_content', 'english_american_lowercase');
+add_filter('the_title', 'eb_english_american_lowercase');
+add_filter('the_content', 'eb_english_american_lowercase');
 
-add_filter('the_title', 'english_american_uppercase');
-add_filter('the_content', 'english_american_uppercase');
+add_filter('the_title', 'eb_english_american_uppercase');
+add_filter('the_content', 'eb_english_american_uppercase');
 
 ?>
