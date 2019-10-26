@@ -4,6 +4,8 @@ Plugin Name: English to American Autocorrecter
 Description: This plugin replaces common English spellings of words with their respective American English spellings.
 Version:     1.1
 Author:      Eric Burt
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 /*
